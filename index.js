@@ -15,6 +15,7 @@ var pagamento_link_div= document.querySelector('.pagamento_link_div')
 var search = document.querySelector('.search')
 var container_pesquisa = document.querySelector('.container_pesquisa')
 var ceta_voltar = document.querySelector('.ceta_voltar')
+var home = document.querySelector('.home')
 
 document.querySelector("#pesquisa").focus()
 
@@ -25,6 +26,10 @@ search.addEventListener('click', ()=>{
 ceta_voltar.addEventListener('click', ()=>{
     container_pesquisa.style.display = 'none'
     header.style.display = 'block'
+})
+window.addEventListener('load', ()=>{
+    home.style.backgroundColor = '#A6CE95'
+   
 })
 
 

@@ -59,12 +59,28 @@ header
 }
 
 .search_menu .menu{
+    width: 30px;
+    height: 28px;
     margin-right: 10px;
     cursor: pointer;
     font-size: 1.2em;
+    border-radius: 50%;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #bbbbbb77;
 }
 
 .search{
+    width: 30px;
+    height: 28px;
+    background-color: #bbbbbb77;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 3px;
     cursor: pointer;
     font-size: 1.2em;
 }
@@ -134,7 +150,7 @@ header
 .container_pesquisa form input{
     border-radius: 20px;
     padding: 8px;
-    border: .7px solid black;
+    border: none;
     background-color: rgba(0, 0, 0, 0.500);
     width: 95%;
 }
@@ -143,7 +159,6 @@ header
 .container_pesquisa form input:focus-within
 {
     background-color: white;
-    border: 1px solid gold;
 }
 
 

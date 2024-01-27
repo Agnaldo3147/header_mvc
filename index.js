@@ -16,6 +16,7 @@ var search = document.querySelector('.search')
 var container_pesquisa = document.querySelector('.container_pesquisa')
 var ceta_voltar = document.querySelector('.ceta_voltar')
 
+document.querySelector("#pesquisa").focus()
 
 search.addEventListener('click', ()=>{
     container_pesquisa.style.display = 'block'

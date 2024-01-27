@@ -11,18 +11,75 @@ var home_link_div = document.querySelector('.home_link_div')
 var chat_link_div = document.querySelector('.chat_link_div')
 var notificacao_link_div = document.querySelector('.notificacao_link')
 var pagamento_link_div= document.querySelector('.pagamento_link_div')
-
 var search = document.querySelector('.search')
 var container_pesquisa = document.querySelector('.container_pesquisa')
 var ceta_voltar = document.querySelector('.ceta_voltar')
 var home = document.querySelector('.home')
+var LarguraTela = body.offsetWidth
+var AlturaTela = body.offsetHeight
 
 document.querySelector("#pesquisa").focus()
 
-search.addEventListener('click', ()=>{
-    container_pesquisa.style.display = 'block'
-    header.style.display = 'none'
+var div_form_versão_pc = document.querySelector('.div_form_versão_pc')
+var ceta = document.querySelector('.ceta')
+
+window.addEventListener('resize', ()=>{
+    
+    if(LarguraTela > '375' && LarguraTela < '600')
+    {
+        search.addEventListener('click', ()=>{
+            div_form_versão_pc.style.display = 'block'
+            search.style.display = 'none'
+        })
+        ceta.addEventListener('click', ()=>{
+            div_form_versão_pc.style.display = 'none'
+            ceta.style.display = 'none'
+            search.style.display = 'block'
+        })
+    }
+    
 })
+if(LarguraTela > '375' && LarguraTela < '600')
+{
+    search.addEventListener('click', ()=>{
+        div_form_versão_pc.style.display = 'block'
+        search.style.display = 'none'
+    })
+    ceta.addEventListener('click', ()=>{
+        div_form_versão_pc.style.display = 'none'
+        ceta.style.display = 'none'
+        search.style.display = 'block'
+    })
+}
+
+
+
+//CONFIGURAÇÕES
+
+window.addEventListener('resize', ()=>{
+    
+    if(LarguraTela <= '375')
+{
+    search.addEventListener('click', ()=>{
+            container_pesquisa.style.display = 'block'
+            header.style.display = 'none'
+            
+    })
+    
+}
+    
+})
+
+if(LarguraTela <= '375')
+{
+    search.addEventListener('click', ()=>{
+            container_pesquisa.style.display = 'block'
+            header.style.display = 'none'
+            
+    })
+    
+}
+
 ceta_voltar.addEventListener('click', ()=>{
     container_pesquisa.style.display = 'none'
     header.style.display = 'block'
@@ -33,90 +90,32 @@ window.addEventListener('load', ()=>{
 })
 
 
-var LarguraTela = body.offsetWidth
-var AlturaTela = body.offsetHeight
-
 
 
 const Menu = ()=>{
     if(info_menu.classList.toggle('menu_left')){
        ofuscar_tela_menu.style.display = 'block'
        
- }else{
+    }else{
         ofuscar_tela_menu.style.display = 'none'
- 
+        info_menu.style.display = 'block'
     }
-     }
+    }
+
 
      ofuscar_tela_menu.addEventListener('click', ()=>{
         Menu()
     })
-     menu.addEventListener('click', ()=>{
-        if(LarguraTela < '590'){
-            Menu() 
-            
-        }else if( LarguraTela <= 590){
-
-            links_computador.map((ele)=>{
-                ele.style.display = 'none'
-            })
-            if(info_menu.classList.toggle('menu_left')){
-                ofuscar_tela_menu.style.display = 'block'
-                
-           }else{
-                 ofuscar_tela_menu.style.display = 'none'
-          
-             }
-             
-        }
-
-    })
-
-    fechar_menu.addEventListener('click', ()=>{
-        info_menu.classList.remove('menu_left')
-        ofuscar_tela_menu.style.display = 'none'
-    })    
-    
-   /*
-   const Menu = ()=>{
-    if(info_menu.classList.toggle('menu_left')){
-       ofuscar_tela_menu.style.display = 'block'
-       
- }else{
-        ofuscar_tela_menu.style.display = 'none'
- 
-    }
-     }
-
-     ofuscar_tela_menu.addEventListener('click', ()=>{
-        Menu()
-    })
-
-    fechar_menu.addEventListener('click', ()=>{
-        info_menu.classList.remove('menu_left')
-        ofuscar_tela_menu.style.display = 'none'
-    })    
-    
     menu.addEventListener('click', ()=>{
-        if(LarguraTela > '600'){
-            Menu() 
-            
-            
-        }else if( LarguraTela <= 590){
-
-            links_computador.map((ele)=>{
-                ele.style.display = 'none'
-            })
-            if(info_menu.classList.toggle('menu_left')){
-                ofuscar_tela_menu.style.display = 'block'
-                
-           }else{
-                 ofuscar_tela_menu.style.display = 'none'
-          
-             }
-             
-        }
+        menu.classList.add('menu_left')
+        Menu()
     })
+    
+
+    fechar_menu.addEventListener('click', ()=>{
+        info_menu.classList.remove('menu_left')
+        ofuscar_tela_menu.style.display = 'none'
+    })    
+    
 
 
-   */ 

@@ -4,31 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HEADER</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css"  media="all">
+    <link rel="stylesheet" href="query.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet">
 </head>
 <body class="body">
+    
+    
     <header class="header">
         <div class="container_logo_search_menu">
             <div class="logo_hustle">
-                <p>
-                    HUTLE
-                </p>
+                <strong>
+                    
+                        HUTLE
+                </strong>
             </div>
+
+            <!--ESTA DIV SERÁ ACIONADA PARA VERSÃO DE TELAS GRANDES MIN-WIDTH: 370PX-->
+        <div class="div_form_versão_pc">
+            <form action="#" method="get" class="form_versão_pc">
+                <div class="ceta">
+                    <ion-icon name="arrow-back-outline"></ion-icon>
+                </div>
+                <input type="text" name="pesquisa_pc" id="pesquisa_pc" placeholder="Pesquisa...">
+                <button type="submit"><ion-icon name="search-outline" ></ion-icon></button>
+            </form>
+        </div>
+                <!--AS CONFIGURAÇÕES TERMINAM AQUI-->
+
             <div class="search_menu">
                 <div class="search">
-                    <ion-icon name="search-outline" ></ion-icon>
+                    <ion-icon name="search-outline" class="ion__" ></ion-icon>
                 </div>
                 <div class="menu">
-                    <span class="material-icons" style="color: white">menu</span>
+                    <span class="material-icons ion__" style="color: white">menu</span>
+                </div>
+                <div class="div_img_perfil">
+                    <a href="#" class="img_perfil">
+                            <img src="newton.jpg" alt="">
+                    </a>
                 </div>
             </div>
-        </div>
-        <div class="div_img_perfil">
-            <a href="#" class="img_perfil">
-                    <img src="newton.jpg" alt="">
-            </a>
+
         </div>
     </header>
 
@@ -58,8 +76,8 @@
             <div class="container_perfil_usuario_menu">
                 <a href="">
                     <img src="newton.jpg" class="img_perfil_menu"></img>
+                    <div class="nome_menu"><p>João Telmo</p></div>
                 </a>
-                <div class="nome_menu"><p>Joao Telmo</p></div>
             </div>
         </div>
 
@@ -112,7 +130,7 @@
                 
                         <p>Definições</p><abbr title=""><ion-icon name="settings-outline"></ion-icon></abbr>
                         
-                
+
                 </li>
             </a>
         </div>
@@ -139,6 +157,65 @@
     </div>
     <div class="ofuscar_tela_menu">
 
+    </div>
+
+    <!--CO0NFIGURAÇÕES DO MEU MENU QUE FICARÁ PRESO NO CANTO DIREITO. VERSÃO PARA COMPUTADORES-->
+
+    <div class="container_menu_computador">
+
+        <div class="div_img_perfil_computador">
+            <a href="#" class="img_perfil_computador">
+                    <img src="newton.jpg" alt="">
+            </a>
+        </div>
+
+        <div class="home_computador def_computador">
+            <a href="">
+                <li>
+                       <abbr title="Início"><ion-icon name="home-outline"></ion-icon></abbr>
+                       <p>Inicio</p> 
+                </li>
+            </a>
+        </div>
+        <div class="msg_computador def_computador">
+            <a href="">
+                <li>
+                        <abbr title="Mensagem"><ion-icon name="chatbubble-outline"></ion-icon></abbr>
+                        <p>Mensagem</p>
+                </li>
+            </a>
+        </div>
+        <div class="notification_computador def_computador">
+            <a href="">
+                <li>
+                        <abbr title="Notificação"><ion-icon name="notifications-outline"></ion-icon></abbr>
+                        <p>Notificação</p>
+                </li>
+            </a>
+        </div>
+        <div class="definicoes_computador def_computador">
+
+            <a href="">
+                <li>
+                
+                        <abbr title=""><ion-icon name="settings-outline"></ion-icon></abbr>
+                        <p>Definições</p>
+
+                </li>
+            </a>
+        </div>
+        <div class="sair_computador def_computador">
+            <a href="">
+                <a href="">
+                    <li>
+                       <abbr title="">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </abbr>
+                        <p>Sair</p>
+                    </li>
+                </a>
+            </a>
+        </div>
     </div>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

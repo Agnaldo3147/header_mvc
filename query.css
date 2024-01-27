@@ -1,0 +1,39 @@
+
+@media screen and (min-width: 600px){
+    .div_form_versão_pc
+    {
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .form_versão_pc div.ceta ion-icon
+    {
+        display: none;
+    }
+    .search
+    {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 820px) {
+    header
+    {
+        height: 45px;
+    }
+    header div.div_img_perfil
+    {
+        display: none;
+    }
+    .container_menu_computador
+    {
+        display: block;
+    }
+    .info_menu
+    {
+        left: -250px;
+        width: 250px;
+    }
+}

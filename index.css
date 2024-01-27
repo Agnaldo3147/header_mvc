@@ -26,7 +26,7 @@ header
     display: flex;
     flex-direction: column;
     background-color: #35794B;
-    height: 56px;
+    height: 62px;
 }
 
 .container_logo_search_menu
@@ -34,6 +34,8 @@ header
     display: flex;
     justify-content: space-between;
     padding-top: 4px;
+    height: 26px;
+   
 }
 
 .logo_hustle
@@ -57,10 +59,17 @@ header
 
 .search{
     cursor: pointer;
+    font-size: 1.2em;
+}
+.voltar{
+    color: white;
+    cursor: pointer;
+    font-size: 1.1em;
 }
 
 .div_img_perfil{
     height: 30px;
+    width: 30px;
     margin-left: 10px;
 }
 .img_perfil{
@@ -85,7 +94,7 @@ header
     height: 100vh;
     display: flex;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.578);
+    background-color: rgba(0, 0, 0, 0.429);
     display: none;
 }
 
@@ -133,7 +142,11 @@ header
 
 
 
-
+.info_menu ion-icon{
+    font-size: 1.4em;
+    color: #35794B;
+    color: black;
+}
 
 
 .menu_left{
@@ -257,7 +270,7 @@ header
     transition: background-color .3s;
 }
 .info_menu > div.def > a > li:hover{
-    background-color: rgba(66, 65, 65, 0.139);
+    background-color: #A6CE95;
 }
 .info_menu > div.def > a > li > p{
     margin-right: 4px;
